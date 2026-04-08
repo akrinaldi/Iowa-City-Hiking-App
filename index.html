@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../assets/treeOutline.png" />
+    <link rel="stylesheet" href="./styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web app to find hikes near Iowa City, based on book from RayGun"
+    />
+    
+    <title>Iowa City Hike Selection App</title>
+  </head>
+  <body>
+    <header>
+        <h1>Hike Selector</h1>
+        <caption>A hike finding tool for Iowa City</caption>
+        <p>Based on the book <cite>20 Places to Hike Within 50 Miles of Iowa City</cite> by Will Kapp and Ian Huebert</p>
+    </header>
+    <main>
+        <section class="distance-select" id="distance-select">
+            <h2>Distance</h2>
+            <p>How far are you willing to travel for your hike?</p>
+            <form id="distance-select-value" name="distanceValue">
+                <fieldset>
+                <input type="radio" id="10mi" name="distance" value="10mi">
+                <label for="10mi">No more than 10 miles</label>
+                </fieldset>
+                <fieldset>
+                <input type="radio" id="25mi" name="distance" value="25mi">
+                <label for="25mi">No more than 25 miles</label>
+                </fieldset>
+                <fieldset>
+                <input type="radio" id="25plusmi" name="distance" value="25plusmi">
+                <label for="25plusmi">More than 25 miles</label>
+                </fieldset>
+                <fieldset>
+                <input type="radio" id="anymi" name="distance" value="anymi">
+                <label for="anymi">Any distance is fine</label>
+                </fieldset>
+                <button type="button" id="getHike" onclick="hikeSelect()">Show me my hikes</button>
+                
+            </form>
+        </section>
+        <section class="results-box" id="results-box">
+            <h2>Results</h2>
+            <button type="button" id="clearHikes">Clear results</button>
+            <div class="results-container" id="results-container">
+                <script src="./main.js"></script>
+            </div>
+            
+
+        </section>
+    </main>
+    <footer>
+        <p>Learn more about these hikes with the guide <a href="https://www.goodreads.com/book/show/59807858-20-miles-to-hike-within-50-miles-of-iowa-city" target="_blank">linked here on Goodreads.</a></p>
+    </footer>
+  </body>
+</html>
